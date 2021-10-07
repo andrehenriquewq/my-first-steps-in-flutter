@@ -18,6 +18,7 @@ class _CampoTextoState extends State<CampoTexto> {
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.all(32),

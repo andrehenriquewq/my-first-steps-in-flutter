@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
         title: Text("Alcool ou gasolina"),
         backgroundColor: Colors.blue,
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.refresh), onPressed: _limparCampos)
+          IconButton(icon: Icon(Icons.refresh), onPressed: _limparCampos),
         ],
       ),
       body: SingleChildScrollView(
