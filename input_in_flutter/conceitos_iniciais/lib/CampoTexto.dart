@@ -8,7 +8,6 @@ class CampoTexto extends StatefulWidget {
 }
 
 class _CampoTextoState extends State<CampoTexto> {
-
   TextEditingController _textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -18,49 +17,47 @@ class _CampoTextoState extends State<CampoTexto> {
         centerTitle: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.all(32),
             child: TextField(
               //text, number, emailAddress, datetime
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: "Digite um valor"
-              ),
+              decoration: InputDecoration(labelText: "Digite um valor"),
               //enabled: false,
               //maximo de caracteres que vc quer que o user digite
-            //  maxLength: 2,
+              //  maxLength: 2,
               //não bloqueia a quantidade de caracteres mas exibe um erro
-           //  maxLengthEnforced: false,
+              //  maxLengthEnforced: false,
               style: TextStyle(
                 fontSize: 25,
                 color: Colors.green,
               ),
               //esconde o que o usuário está digitando.
-             // obscureText: true,
+              // obscureText: true,
 
-             //como recuperar oque o usuário digitou e usar?
-             // o onChanged captura tudo que o usuario digitar em tempo real
-             /*
+              //como recuperar oque o usuário digitou e usar?
+              // o onChanged captura tudo que o usuario digitar em tempo real
+              /*
              onChanged: (String texto){
                print("Valor digitado:" + texto);
              }, */
-             //o onSubmitted só passa os valores quando o user confirma os dados
-             onSubmitted: (String texto){
-               print("Valor digitado:" + texto);
-             },
-             controller: _textEditingController,
+              //o onSubmitted só passa os valores quando o user confirma os dados
+              onSubmitted: (String texto) {
+                print("Valor digitado:" + texto);
+              },
+              controller: _textEditingController,
             ),
           ),
           RaisedButton(
             child: Text("Salvar"),
             color: Colors.lightGreen,
-            onPressed: (){
+            onPressed: () {
               print("Valor digitado button:" + _textEditingController.text);
             },
           ),
-
         ],
       ),
     );
