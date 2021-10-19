@@ -35,6 +35,8 @@ class _EntradaCheckboxState extends State<EntradaCheckbox> {
               });
             },
           ), */
+
+          //o checkbox marca várias opções
             CheckboxListTile(
                 title: Text("Comida brasileira"),
                 subtitle: Text("A melhor comida do mundo!!"),
