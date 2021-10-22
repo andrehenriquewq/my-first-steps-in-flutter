@@ -18,31 +18,74 @@ class _EntradaRadioButtonState extends State<EntradaRadioButton> {
       body: Container(
         child: Column(
           children: <Widget>[
-            Text("Masculino"),
-            Radio(
-              //define o valor ao clicar no radio
+            RadioListTile(
+              title: Text("Masculino"),
               value: "m",
-              //define/recebe oque foi selecionado pelo usuário, recebe o mesmo tipo
               groupValue: _escolhaUsuario,
-              onChanged: (String escolha){
-                setState(() {
-                  _escolhaUsuario = escolha;
-                });
-                print("resultado: "+ escolha);
-              }
+              onChanged: (String escolha) {
+                  setState(() {
+                    _escolhaUsuario = escolha;
+                  });
+                  print("resultado: " + escolha);
+                }
               ),
-              Text("Feminino"),
-            Radio(
+              RadioListTile(
+              title: Text("Feminino"),
               value: "f",
               groupValue: _escolhaUsuario,
-              onChanged: (String escolha){
-                setState(() {
-                  _escolhaUsuario = escolha;
-                });
-                print("resultado: "+ escolha);
-              }
-              )
+              onChanged: (String escolha) {
+                  setState(() {
+                    _escolhaUsuario = escolha;
+                  });
+                  print("resultado: " + escolha);
+                }
+              ),
+              RadioListTile(
+              title: Text("teste"),
+              value: "t",
+              groupValue: _escolhaUsuario,
+              onChanged: (String escolha) {
+                  setState(() {
+                    _escolhaUsuario = escolha;
+                  });
+                  print("resultado: " + escolha);
+                }
+              ),
+              RaisedButton(
+              onPressed: (){
+                print("O usuário escolheu: " + _escolhaUsuario.toString());
 
+              },
+              child: Text(
+                "Salvar",
+                style: TextStyle(
+                  fontSize: 20
+                ),
+              ),
+            ),
+           /*
+            Text("Masculino"),
+            Radio(
+                //define o valor ao clicar no radio, saber qual radio foi selecionado
+                value: "m",
+                //define/recebe oque foi selecionado pelo usuário, recebe o mesmo tipo
+                groupValue: _escolhaUsuario,
+                onChanged: (String escolha) {
+                  setState(() {
+                    _escolhaUsuario = escolha;
+                  });
+                  print("resultado: " + escolha);
+                }),
+            Text("Feminino"),
+            Radio(
+                value: "f",
+                groupValue: _escolhaUsuario,
+                onChanged: (String escolha) {
+                  setState(() {
+                    _escolhaUsuario = escolha;
+                  });
+                  print("resultado: " + escolha);
+                }) */
           ],
         ),
       ),
