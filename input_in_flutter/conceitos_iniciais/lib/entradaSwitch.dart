@@ -22,7 +22,7 @@ class _EntradaSwitchState extends State<EntradaSwitch> {
 
             SwitchListTile(
               title: Text("Receber notificações?"),
-             value: _escolhaUsuario,
+             value: _escolhaUsuario, 
              onChanged: (bool valor){
                setState(() {
                  _escolhaUsuario = valor;
