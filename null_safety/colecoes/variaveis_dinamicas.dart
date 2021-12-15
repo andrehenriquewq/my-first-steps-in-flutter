@@ -8,5 +8,7 @@
 
    num numero = 1.3424;
    numero = 2;
+
+   print(nome);
    
  }

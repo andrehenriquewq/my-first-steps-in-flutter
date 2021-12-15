@@ -1,5 +1,3 @@
-import 'retornos_de_func_nulable.dart';
-
 var a = 10;
 void main() {
   a = 5;
